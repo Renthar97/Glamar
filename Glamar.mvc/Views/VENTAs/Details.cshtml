@@ -1,0 +1,42 @@
+﻿@model Entidad.VENTA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>VENTA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EMPLEADO.Apellidos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMPLEADO.Apellidos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MONEDA.descp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MONEDA.descp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Monto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Monto)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.VentaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

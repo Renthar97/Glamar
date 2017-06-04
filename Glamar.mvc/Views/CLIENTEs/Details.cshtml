@@ -1,0 +1,58 @@
+﻿@model Entidad.CLIENTE
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CLIENTE</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nom_Cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nom_Cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ape_Cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ape_Cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pts_Acum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pts_Acum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pts_Usados)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pts_Usados)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pts_Disp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pts_Disp)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ClienteId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

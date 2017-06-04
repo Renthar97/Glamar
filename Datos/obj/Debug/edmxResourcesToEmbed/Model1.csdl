@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GlamarModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ALOJAMIENTO">
+    <Key>
+      <PropertyRef Name="ID_Alojamiento" />
+    </Key>
+    <Property Name="ID_Alojamiento" Type="Int32" Nullable="false" />
+    <Property Name="ID_Reserva" Type="Int32" />
+    <Property Name="ID_Hotel" Type="Int32" />
+    <Property Name="nro_Hab" Type="Int32" />
+    <NavigationProperty Name="HOTEL" Relationship="Self.FK_ALOJAMIENTO_HOTEL" FromRole="ALOJAMIENTO" ToRole="HOTEL" />
+    <NavigationProperty Name="RESERVA" Relationship="Self.FK_ALOJAMIENTO_RESERVA" FromRole="ALOJAMIENTO" ToRole="RESERVA" />
+  </EntityType>
+  <EntityType Name="CIUDAD">
+    <Key>
+      <PropertyRef Name="ID_Ciudad" />
+    </Key>
+    <Property Name="ID_Ciudad" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="HOTEL" Relationship="Self.FK_HOTEL_CIUDAD" FromRole="CIUDAD" ToRole="HOTEL" />
+  </EntityType>
+  <EntityType Name="CLIENTE">
+    <Key>
+      <PropertyRef Name="ID_Cliente" />
+    </Key>
+    <Property Name="ID_Cliente" Type="Int32" Nullable="false" />
+    <Property Name="nom_Cliente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ape_Cliente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="pts_Acum" Type="Int32" />
+    <Property Name="pts_Usados" Type="Int32" />
+    <Property Name="pts_Disp" Type="Int32" />
+    <NavigationProperty Name="CORREO" Relationship="Self.FK_CORREO_CLIENTE" FromRole="CLIENTE" ToRole="CORREO" />
+    <NavigationProperty Name="DOCUMENTO" Relationship="Self.FK_DOCUMENTO_CLIENTE" FromRole="CLIENTE" ToRole="DOCUMENTO" />
+    <NavigationProperty Name="TELEFONO" Relationship="Self.FK_TELEFONO_CLIENTE" FromRole="CLIENTE" ToRole="TELEFONO" />
+    <NavigationProperty Name="RESERVA" Relationship="Self.RESERVAXCLIENTE" FromRole="CLIENTE" ToRole="RESERVA" />
+  </EntityType>
+  <EntityType Name="CORREO">
+    <Key>
+      <PropertyRef Name="IdCorreo" />
+    </Key>
+    <Property Name="IdCorreo" Type="Int32" Nullable="false" />
+    <Property Name="IdCliente" Type="Int32" />
+    <Property Name="Correo1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CLIENTE" Relationship="Self.FK_CORREO_CLIENTE" FromRole="CORREO" ToRole="CLIENTE" />
+    <NavigationProperty Name="TIPOCORREO" Relationship="Self.FK_TIPOCORREO_CORREO" FromRole="CORREO" ToRole="TIPOCORREO" />
+  </EntityType>
+  <EntityType Name="DOCUMENTO">
+    <Key>
+      <PropertyRef Name="ID_Doc" />
+    </Key>
+    <Property Name="ID_Doc" Type="Int32" Nullable="false" />
+    <Property Name="ID_Venta" Type="Int32" />
+    <Property Name="ID_Cliente" Type="Int32" />
+    <Property Name="tipo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CLIENTE" Relationship="Self.FK_DOCUMENTO_CLIENTE" FromRole="DOCUMENTO" ToRole="CLIENTE" />
+    <NavigationProperty Name="VENTA" Relationship="Self.FK_DOCUMENTO_VENTA" FromRole="DOCUMENTO" ToRole="VENTA" />
+  </EntityType>
+  <EntityType Name="EMPLEADO">
+    <Key>
+      <PropertyRef Name="ID_Empleado" />
+    </Key>
+    <Property Name="ID_Empleado" Type="Int32" Nullable="false" />
+    <Property Name="ID_Usuario" Type="Int32" />
+    <Property Name="Apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="LOGIN" Relationship="Self.FK_EMPLEADO_LOGIN" FromRole="EMPLEADO" ToRole="LOGIN" />
+    <NavigationProperty Name="VENTA" Relationship="Self.FK_VENTA_EMPLEADO" FromRole="EMPLEADO" ToRole="VENTA" />
+  </EntityType>
+  <EntityType Name="HOTEL">
+    <Key>
+      <PropertyRef Name="ID_Hotel" />
+    </Key>
+    <Property Name="ID_Hotel" Type="Int32" Nullable="false" />
+    <Property Name="ID_Ciudad" Type="Int32" />
+    <Property Name="NomHotel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ALOJAMIENTO" Relationship="Self.FK_ALOJAMIENTO_HOTEL" FromRole="HOTEL" ToRole="ALOJAMIENTO" />
+    <NavigationProperty Name="CIUDAD" Relationship="Self.FK_HOTEL_CIUDAD" FromRole="HOTEL" ToRole="CIUDAD" />
+  </EntityType>
+  <EntityType Name="ITINERARIO">
+    <Key>
+      <PropertyRef Name="ID_Itineraro" />
+    </Key>
+    <Property Name="ID_Itineraro" Type="Int32" Nullable="false" />
+    <Property Name="ID_Reserva" Type="Int32" />
+    <Property Name="origen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="destino" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fec_Salida" Type="DateTime" Precision="0" />
+    <Property Name="fec_Retorno" Type="DateTime" Precision="0" />
+    <Property Name="distancia" Type="Int32" />
+    <NavigationProperty Name="RESERVA" Relationship="Self.FK_ITINERARIO_RESERVA" FromRole="ITINERARIO" ToRole="RESERVA" />
+  </EntityType>
+  <EntityType Name="LOGIN">
+    <Key>
+      <PropertyRef Name="ID_Usuario" />
+    </Key>
+    <Property Name="ID_Usuario" Type="Int32" Nullable="false" />
+    <Property Name="contraseña" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="EMPLEADO" Relationship="Self.FK_EMPLEADO_LOGIN" FromRole="LOGIN" ToRole="EMPLEADO" />
+  </EntityType>
+  <EntityType Name="MONEDA">
+    <Key>
+      <PropertyRef Name="ID_Moneda" />
+    </Key>
+    <Property Name="ID_Moneda" Type="Int32" Nullable="false" />
+    <Property Name="descp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="VENTA" Relationship="Self.FK_VENTA_MONEDA" FromRole="MONEDA" ToRole="VENTA" />
+  </EntityType>
+  <EntityType Name="RESERVA">
+    <Key>
+      <PropertyRef Name="ID_Reserva" />
+    </Key>
+    <Property Name="ID_Reserva" Type="Int32" Nullable="false" />
+    <Property Name="ID_Venta" Type="Int32" />
+    <Property Name="Estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ALOJAMIENTO" Relationship="Self.FK_ALOJAMIENTO_RESERVA" FromRole="RESERVA" ToRole="ALOJAMIENTO" />
+    <NavigationProperty Name="ITINERARIO" Relationship="Self.FK_ITINERARIO_RESERVA" FromRole="RESERVA" ToRole="ITINERARIO" />
+    <NavigationProperty Name="VENTA" Relationship="Self.FK_RESERVA_VENTA" FromRole="RESERVA" ToRole="VENTA" />
+    <NavigationProperty Name="CLIENTE" Relationship="Self.RESERVAXCLIENTE" FromRole="RESERVA" ToRole="CLIENTE" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TELEFONO">
+    <Key>
+      <PropertyRef Name="ID_Telefono" />
+    </Key>
+    <Property Name="ID_Telefono" Type="Int32" Nullable="false" />
+    <Property Name="ID_Cliente" Type="Int32" />
+    <Property Name="numero" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CLIENTE" Relationship="Self.FK_TELEFONO_CLIENTE" FromRole="TELEFONO" ToRole="CLIENTE" />
+    <NavigationProperty Name="TIPOTELEFONO" Relationship="Self.FK_TIPOTELEFONO_TELEFONO" FromRole="TELEFONO" ToRole="TIPOTELEFONO" />
+  </EntityType>
+  <EntityType Name="TIPOCORREO">
+    <Key>
+      <PropertyRef Name="idTipoCorreo" />
+    </Key>
+    <Property Name="idTipoCorreo" Type="Int32" Nullable="false" />
+    <Property Name="idCorreo" Type="Int32" />
+    <Property Name="TipoCorreo1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CORREO" Relationship="Self.FK_TIPOCORREO_CORREO" FromRole="TIPOCORREO" ToRole="CORREO" />
+  </EntityType>
+  <EntityType Name="TIPOTELEFONO">
+    <Key>
+      <PropertyRef Name="ID_TipoTelefono" />
+    </Key>
+    <Property Name="ID_TipoTelefono" Type="Int32" Nullable="false" />
+    <Property Name="ID_Telefono" Type="Int32" />
+    <Property Name="tipoTelefono1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TELEFONO" Relationship="Self.FK_TIPOTELEFONO_TELEFONO" FromRole="TIPOTELEFONO" ToRole="TELEFONO" />
+  </EntityType>
+  <EntityType Name="VENTA">
+    <Key>
+      <PropertyRef Name="ID_Venta" />
+    </Key>
+    <Property Name="ID_Venta" Type="Int32" Nullable="false" />
+    <Property Name="ID_Empleado" Type="Int32" />
+    <Property Name="ID_Moneda" Type="Int32" />
+    <Property Name="Monto" Type="Int32" />
+    <NavigationProperty Name="DOCUMENTO" Relationship="Self.FK_DOCUMENTO_VENTA" FromRole="VENTA" ToRole="DOCUMENTO" />
+    <NavigationProperty Name="EMPLEADO" Relationship="Self.FK_VENTA_EMPLEADO" FromRole="VENTA" ToRole="EMPLEADO" />
+    <NavigationProperty Name="MONEDA" Relationship="Self.FK_VENTA_MONEDA" FromRole="VENTA" ToRole="MONEDA" />
+    <NavigationProperty Name="RESERVA" Relationship="Self.FK_RESERVA_VENTA" FromRole="VENTA" ToRole="RESERVA" />
+  </EntityType>
+  <Association Name="FK_ALOJAMIENTO_HOTEL">
+    <End Role="HOTEL" Type="Self.HOTEL" Multiplicity="0..1" />
+    <End Role="ALOJAMIENTO" Type="Self.ALOJAMIENTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOTEL">
+        <PropertyRef Name="ID_Hotel" />
+      </Principal>
+      <Dependent Role="ALOJAMIENTO">
+        <PropertyRef Name="ID_Hotel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ALOJAMIENTO_RESERVA">
+    <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="0..1" />
+    <End Role="ALOJAMIENTO" Type="Self.ALOJAMIENTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RESERVA">
+        <PropertyRef Name="ID_Reserva" />
+      </Principal>
+      <Dependent Role="ALOJAMIENTO">
+        <PropertyRef Name="ID_Reserva" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HOTEL_CIUDAD">
+    <End Role="CIUDAD" Type="Self.CIUDAD" Multiplicity="0..1" />
+    <End Role="HOTEL" Type="Self.HOTEL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CIUDAD">
+        <PropertyRef Name="ID_Ciudad" />
+      </Principal>
+      <Dependent Role="HOTEL">
+        <PropertyRef Name="ID_Ciudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CORREO_CLIENTE">
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="0..1" />
+    <End Role="CORREO" Type="Self.CORREO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTE">
+        <PropertyRef Name="ID_Cliente" />
+      </Principal>
+      <Dependent Role="CORREO">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DOCUMENTO_CLIENTE">
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="0..1" />
+    <End Role="DOCUMENTO" Type="Self.DOCUMENTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTE">
+        <PropertyRef Name="ID_Cliente" />
+      </Principal>
+      <Dependent Role="DOCUMENTO">
+        <PropertyRef Name="ID_Cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TELEFONO_CLIENTE">
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="0..1" />
+    <End Role="TELEFONO" Type="Self.TELEFONO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTE">
+        <PropertyRef Name="ID_Cliente" />
+      </Principal>
+      <Dependent Role="TELEFONO">
+        <PropertyRef Name="ID_Cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TIPOCORREO_CORREO">
+    <End Role="CORREO" Type="Self.CORREO" Multiplicity="0..1" />
+    <End Role="TIPOCORREO" Type="Self.TIPOCORREO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CORREO">
+        <PropertyRef Name="IdCorreo" />
+      </Principal>
+      <Dependent Role="TIPOCORREO">
+        <PropertyRef Name="idCorreo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DOCUMENTO_VENTA">
+    <End Role="VENTA" Type="Self.VENTA" Multiplicity="0..1" />
+    <End Role="DOCUMENTO" Type="Self.DOCUMENTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VENTA">
+        <PropertyRef Name="ID_Venta" />
+      </Principal>
+      <Dependent Role="DOCUMENTO">
+        <PropertyRef Name="ID_Venta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EMPLEADO_LOGIN">
+    <End Role="LOGIN" Type="Self.LOGIN" Multiplicity="0..1" />
+    <End Role="EMPLEADO" Type="Self.EMPLEADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOGIN">
+        <PropertyRef Name="ID_Usuario" />
+      </Principal>
+      <Dependent Role="EMPLEADO">
+        <PropertyRef Name="ID_Usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VENTA_EMPLEADO">
+    <End Role="EMPLEADO" Type="Self.EMPLEADO" Multiplicity="0..1" />
+    <End Role="VENTA" Type="Self.VENTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPLEADO">
+        <PropertyRef Name="ID_Empleado" />
+      </Principal>
+      <Dependent Role="VENTA">
+        <PropertyRef Name="ID_Empleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ITINERARIO_RESERVA">
+    <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="0..1" />
+    <End Role="ITINERARIO" Type="Self.ITINERARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RESERVA">
+        <PropertyRef Name="ID_Reserva" />
+      </Principal>
+      <Dependent Role="ITINERARIO">
+        <PropertyRef Name="ID_Reserva" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VENTA_MONEDA">
+    <End Role="MONEDA" Type="Self.MONEDA" Multiplicity="0..1" />
+    <End Role="VENTA" Type="Self.VENTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MONEDA">
+        <PropertyRef Name="ID_Moneda" />
+      </Principal>
+      <Dependent Role="VENTA">
+        <PropertyRef Name="ID_Moneda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RESERVA_VENTA">
+    <End Role="VENTA" Type="Self.VENTA" Multiplicity="0..1" />
+    <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VENTA">
+        <PropertyRef Name="ID_Venta" />
+      </Principal>
+      <Dependent Role="RESERVA">
+        <PropertyRef Name="ID_Venta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TIPOTELEFONO_TELEFONO">
+    <End Role="TELEFONO" Type="Self.TELEFONO" Multiplicity="0..1" />
+    <End Role="TIPOTELEFONO" Type="Self.TIPOTELEFONO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TELEFONO">
+        <PropertyRef Name="ID_Telefono" />
+      </Principal>
+      <Dependent Role="TIPOTELEFONO">
+        <PropertyRef Name="ID_Telefono" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RESERVAXCLIENTE">
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="*" />
+    <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="BDGlamar" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ALOJAMIENTO" EntityType="Self.ALOJAMIENTO" />
+    <EntitySet Name="CIUDAD" EntityType="Self.CIUDAD" />
+    <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" />
+    <EntitySet Name="CORREO" EntityType="Self.CORREO" />
+    <EntitySet Name="DOCUMENTO" EntityType="Self.DOCUMENTO" />
+    <EntitySet Name="EMPLEADO" EntityType="Self.EMPLEADO" />
+    <EntitySet Name="HOTEL" EntityType="Self.HOTEL" />
+    <EntitySet Name="ITINERARIO" EntityType="Self.ITINERARIO" />
+    <EntitySet Name="LOGIN" EntityType="Self.LOGIN" />
+    <EntitySet Name="MONEDA" EntityType="Self.MONEDA" />
+    <EntitySet Name="RESERVA" EntityType="Self.RESERVA" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="TELEFONO" EntityType="Self.TELEFONO" />
+    <EntitySet Name="TIPOCORREO" EntityType="Self.TIPOCORREO" />
+    <EntitySet Name="TIPOTELEFONO" EntityType="Self.TIPOTELEFONO" />
+    <EntitySet Name="VENTA" EntityType="Self.VENTA" />
+    <AssociationSet Name="FK_ALOJAMIENTO_HOTEL" Association="Self.FK_ALOJAMIENTO_HOTEL">
+      <End Role="HOTEL" EntitySet="HOTEL" />
+      <End Role="ALOJAMIENTO" EntitySet="ALOJAMIENTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ALOJAMIENTO_RESERVA" Association="Self.FK_ALOJAMIENTO_RESERVA">
+      <End Role="RESERVA" EntitySet="RESERVA" />
+      <End Role="ALOJAMIENTO" EntitySet="ALOJAMIENTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HOTEL_CIUDAD" Association="Self.FK_HOTEL_CIUDAD">
+      <End Role="CIUDAD" EntitySet="CIUDAD" />
+      <End Role="HOTEL" EntitySet="HOTEL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CORREO_CLIENTE" Association="Self.FK_CORREO_CLIENTE">
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+      <End Role="CORREO" EntitySet="CORREO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DOCUMENTO_CLIENTE" Association="Self.FK_DOCUMENTO_CLIENTE">
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+      <End Role="DOCUMENTO" EntitySet="DOCUMENTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TELEFONO_CLIENTE" Association="Self.FK_TELEFONO_CLIENTE">
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+      <End Role="TELEFONO" EntitySet="TELEFONO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TIPOCORREO_CORREO" Association="Self.FK_TIPOCORREO_CORREO">
+      <End Role="CORREO" EntitySet="CORREO" />
+      <End Role="TIPOCORREO" EntitySet="TIPOCORREO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DOCUMENTO_VENTA" Association="Self.FK_DOCUMENTO_VENTA">
+      <End Role="VENTA" EntitySet="VENTA" />
+      <End Role="DOCUMENTO" EntitySet="DOCUMENTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EMPLEADO_LOGIN" Association="Self.FK_EMPLEADO_LOGIN">
+      <End Role="LOGIN" EntitySet="LOGIN" />
+      <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VENTA_EMPLEADO" Association="Self.FK_VENTA_EMPLEADO">
+      <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+      <End Role="VENTA" EntitySet="VENTA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ITINERARIO_RESERVA" Association="Self.FK_ITINERARIO_RESERVA">
+      <End Role="RESERVA" EntitySet="RESERVA" />
+      <End Role="ITINERARIO" EntitySet="ITINERARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VENTA_MONEDA" Association="Self.FK_VENTA_MONEDA">
+      <End Role="MONEDA" EntitySet="MONEDA" />
+      <End Role="VENTA" EntitySet="VENTA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RESERVA_VENTA" Association="Self.FK_RESERVA_VENTA">
+      <End Role="VENTA" EntitySet="VENTA" />
+      <End Role="RESERVA" EntitySet="RESERVA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TIPOTELEFONO_TELEFONO" Association="Self.FK_TIPOTELEFONO_TELEFONO">
+      <End Role="TELEFONO" EntitySet="TELEFONO" />
+      <End Role="TIPOTELEFONO" EntitySet="TIPOTELEFONO" />
+    </AssociationSet>
+    <AssociationSet Name="RESERVAXCLIENTE" Association="Self.RESERVAXCLIENTE">
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+      <End Role="RESERVA" EntitySet="RESERVA" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

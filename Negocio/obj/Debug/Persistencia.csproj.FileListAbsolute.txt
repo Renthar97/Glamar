@@ -1,0 +1,30 @@
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Negocio\bin\Debug\Negocio.dll.config
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Negocio\bin\Debug\Negocio.dll
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Negocio\bin\Debug\Entidad.dll
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Negocio\bin\Debug\EntityFramework.dll
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Negocio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Negocio\bin\Debug\Entidad.pdb
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Negocio\bin\Debug\EntityFramework.xml
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Negocio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Negocio\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Negocio\obj\Debug\Negocio.dll
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Negocio\obj\Debug\Negocio.Migrations.GLAMAR.resources
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Negocio\obj\Debug\Persistencia.csproj.GenerateResource.Cache
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Negocio\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Negocio\obj\Debug\Negocio.Migrations.GLAMAR.resources
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Negocio\obj\Debug\Persistencia.csproj.GenerateResource.Cache
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Negocio\obj\Debug\Negocio.dll
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Negocio\obj\Debug\Negocio.pdb
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Negocio\bin\Debug\Negocio.dll.config
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Negocio\bin\Debug\Negocio.dll
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Negocio\bin\Debug\Negocio.pdb
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Negocio\bin\Debug\Entidad.dll
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Negocio\bin\Debug\EntityFramework.dll
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Negocio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Negocio\bin\Debug\Entidad.pdb
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Negocio\bin\Debug\EntityFramework.xml
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Negocio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Negocio\obj\Debug\Negocio.Migrations.Modelo2.resources
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Negocio\obj\Debug\Negocio.Migrations.Modelo21.resources

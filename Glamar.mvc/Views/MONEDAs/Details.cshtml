@@ -1,0 +1,26 @@
+﻿@model Entidad.MONEDA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MONEDA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.descp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descp)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MonedaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,42 @@
+﻿@model Entidad.ALOJAMIENTO
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ALOJAMIENTO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HOTEL.NomHotel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOTEL.NomHotel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RESERVA.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RESERVA.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nro_Hab)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nro_Hab)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AlojamientoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,7 @@
+c:\users\pc-user\documents\visual studio 2017\Projects\GlamarProy\Negocio\bin\Debug\Negocio.dll
+c:\users\pc-user\documents\visual studio 2017\Projects\GlamarProy\Negocio\bin\Debug\Negocio.pdb
+c:\users\pc-user\documents\visual studio 2017\Projects\GlamarProy\Negocio\bin\Debug\Entidad.dll
+c:\users\pc-user\documents\visual studio 2017\Projects\GlamarProy\Negocio\bin\Debug\Entidad.pdb
+c:\users\pc-user\documents\visual studio 2017\Projects\GlamarProy\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+c:\users\pc-user\documents\visual studio 2017\Projects\GlamarProy\Negocio\obj\Debug\Negocio.dll
+c:\users\pc-user\documents\visual studio 2017\Projects\GlamarProy\Negocio\obj\Debug\Negocio.pdb

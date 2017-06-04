@@ -1,0 +1,14 @@
+c:\users\pc-user\documents\visual studio 2017\Projects\GlamarProy\Entidad\bin\Debug\Entidad.dll
+c:\users\pc-user\documents\visual studio 2017\Projects\GlamarProy\Entidad\bin\Debug\Entidad.pdb
+c:\users\pc-user\documents\visual studio 2017\Projects\GlamarProy\Entidad\obj\Debug\Entidad.csprojResolveAssemblyReference.cache
+c:\users\pc-user\documents\visual studio 2017\Projects\GlamarProy\Entidad\obj\Debug\Entidad.dll
+c:\users\pc-user\documents\visual studio 2017\Projects\GlamarProy\Entidad\obj\Debug\Entidad.pdb
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Entidad\bin\Debug\Entidad.dll
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Entidad\bin\Debug\Entidad.pdb
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Entidad\obj\Debug\Entidad.csprojResolveAssemblyReference.cache
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Entidad\obj\Debug\Entidad.dll
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Entidad\obj\Debug\Entidad.pdb
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Entidad\bin\Debug\Entidad.dll
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Entidad\bin\Debug\Entidad.pdb
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Entidad\obj\Debug\Entidad.dll
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Entidad\obj\Debug\Entidad.pdb

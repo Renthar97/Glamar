@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Entidad.TIPOTELEFONO>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TELEFONO.numero)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tipoTelefono1)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TELEFONO.numero)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipoTelefono1)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TipoTelefonoId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TipoTelefonoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TipoTelefonoId })
+        </td>
+    </tr>
+}
+
+</table>

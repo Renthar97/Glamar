@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Entidad.ITINERARIO>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RESERVA.Estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.origen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.destino)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fec_Salida)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fec_Retorno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.distancia)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RESERVA.Estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.origen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.destino)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fec_Salida)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fec_Retorno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.distancia)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ITINERARIOId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ITINERARIOId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ITINERARIOId })
+        </td>
+    </tr>
+}
+
+</table>

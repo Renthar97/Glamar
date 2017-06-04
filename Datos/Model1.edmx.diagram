@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="269fdf49672f432c9fcb071203162f01" Name="Diagram1">
+        <EntityTypeShape EntityType="GlamarModel.ALOJAMIENTO" Width="1.5" PointX="9.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlamarModel.CIUDAD" Width="1.5" PointX="5.25" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlamarModel.CLIENTE" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlamarModel.CORREO" Width="1.5" PointX="7.5" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlamarModel.DOCUMENTO" Width="1.5" PointX="7.5" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlamarModel.EMPLEADO" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlamarModel.HOTEL" Width="1.5" PointX="7.5" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlamarModel.ITINERARIO" Width="1.5" PointX="9.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlamarModel.LOGIN" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlamarModel.MONEDA" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlamarModel.RESERVA" Width="1.5" PointX="7.5" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlamarModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlamarModel.TELEFONO" Width="1.5" PointX="7.5" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlamarModel.TIPOCORREO" Width="1.5" PointX="9.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlamarModel.TIPOTELEFONO" Width="1.5" PointX="9.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlamarModel.VENTA" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <AssociationConnector Association="GlamarModel.FK_ALOJAMIENTO_HOTEL" ManuallyRouted="false" />
+        <AssociationConnector Association="GlamarModel.FK_ALOJAMIENTO_RESERVA" ManuallyRouted="false" />
+        <AssociationConnector Association="GlamarModel.FK_HOTEL_CIUDAD" ManuallyRouted="false" />
+        <AssociationConnector Association="GlamarModel.FK_CORREO_CLIENTE" ManuallyRouted="false" />
+        <AssociationConnector Association="GlamarModel.FK_DOCUMENTO_CLIENTE" ManuallyRouted="false" />
+        <AssociationConnector Association="GlamarModel.FK_TELEFONO_CLIENTE" ManuallyRouted="false" />
+        <AssociationConnector Association="GlamarModel.FK_TIPOCORREO_CORREO" ManuallyRouted="false" />
+        <AssociationConnector Association="GlamarModel.FK_DOCUMENTO_VENTA" ManuallyRouted="false" />
+        <AssociationConnector Association="GlamarModel.FK_EMPLEADO_LOGIN" ManuallyRouted="false" />
+        <AssociationConnector Association="GlamarModel.FK_VENTA_EMPLEADO" ManuallyRouted="false" />
+        <AssociationConnector Association="GlamarModel.FK_ITINERARIO_RESERVA" ManuallyRouted="false" />
+        <AssociationConnector Association="GlamarModel.FK_VENTA_MONEDA" ManuallyRouted="false" />
+        <AssociationConnector Association="GlamarModel.FK_RESERVA_VENTA" ManuallyRouted="false" />
+        <AssociationConnector Association="GlamarModel.FK_TIPOTELEFONO_TELEFONO" ManuallyRouted="false" />
+        <AssociationConnector Association="GlamarModel.RESERVAXCLIENTE" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

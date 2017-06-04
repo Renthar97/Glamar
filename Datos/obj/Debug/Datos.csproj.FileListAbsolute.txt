@@ -1,0 +1,36 @@
+c:\users\pc-user\documents\visual studio 2017\Projects\GlamarProy\Datos\bin\Debug\Datos.dll.config
+c:\users\pc-user\documents\visual studio 2017\Projects\GlamarProy\Datos\bin\Debug\Datos.dll
+c:\users\pc-user\documents\visual studio 2017\Projects\GlamarProy\Datos\bin\Debug\Datos.pdb
+c:\users\pc-user\documents\visual studio 2017\Projects\GlamarProy\Datos\bin\Debug\Entidad.dll
+c:\users\pc-user\documents\visual studio 2017\Projects\GlamarProy\Datos\bin\Debug\EntityFramework.dll
+c:\users\pc-user\documents\visual studio 2017\Projects\GlamarProy\Datos\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\pc-user\documents\visual studio 2017\Projects\GlamarProy\Datos\bin\Debug\Entidad.pdb
+c:\users\pc-user\documents\visual studio 2017\Projects\GlamarProy\Datos\bin\Debug\EntityFramework.xml
+c:\users\pc-user\documents\visual studio 2017\Projects\GlamarProy\Datos\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\pc-user\documents\visual studio 2017\Projects\GlamarProy\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+c:\users\pc-user\documents\visual studio 2017\Projects\GlamarProy\Datos\obj\Debug\Datos.dll
+c:\users\pc-user\documents\visual studio 2017\Projects\GlamarProy\Datos\obj\Debug\Datos.pdb
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Datos\bin\Debug\Datos.dll.config
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Datos\bin\Debug\Datos.dll
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Datos\bin\Debug\Datos.pdb
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Datos\bin\Debug\Entidad.dll
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Datos\bin\Debug\EntityFramework.dll
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Datos\bin\Debug\Entidad.pdb
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Datos\bin\Debug\EntityFramework.xml
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Datos\obj\Debug\Datos.dll
+C:\Users\Carlos Roberto\Desktop\GLAMAR\GlamarProy\Datos\obj\Debug\Datos.pdb
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Datos\bin\Debug\Datos.dll.config
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Datos\bin\Debug\Datos.dll
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Datos\bin\Debug\Datos.pdb
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Datos\bin\Debug\Entidad.dll
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Datos\bin\Debug\EntityFramework.dll
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Datos\bin\Debug\Entidad.pdb
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Datos\bin\Debug\EntityFramework.xml
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Datos\obj\Debug\Datos.dll
+C:\Users\HP\Desktop\GLAMAR\GlamarProy\Datos\obj\Debug\Datos.pdb

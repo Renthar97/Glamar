@@ -1,0 +1,66 @@
+﻿@model Entidad.ITINERARIO
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ITINERARIO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RESERVA.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RESERVA.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.origen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.origen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.destino)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.destino)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fec_Salida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fec_Salida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fec_Retorno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fec_Retorno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.distancia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.distancia)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ITINERARIOId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

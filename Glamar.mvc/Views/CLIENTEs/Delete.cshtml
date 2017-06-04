@@ -1,0 +1,64 @@
+﻿@model Entidad.CLIENTE
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>CLIENTE</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nom_Cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nom_Cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ape_Cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ape_Cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pts_Acum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pts_Acum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pts_Usados)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pts_Usados)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pts_Disp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pts_Disp)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
